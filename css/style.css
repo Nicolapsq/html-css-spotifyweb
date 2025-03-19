@@ -88,8 +88,32 @@ ul{
     color: white;
 }
 
+.logo-small{
+    padding-bottom: 10px;
+}
+
 .logo-large{
     display: none;
+    padding-bottom: 10px;
+
+}
+
+.text{
+    display: none;
+}
+
+.playlist.top{
+    display: none;
+}
+
+.bottom .logo{
+    width: 20px;
+}
+
+.bottom .logo.download{
+    width: 35px;
+    background-color: grey;
+    border-radius: 50%;
 }
 
 .right{
@@ -120,7 +144,8 @@ ul{
 
 @media screen and (min-width: 639px) {
     .left{
-        width: 200px;
+        width: 250px;
+        font-size: 1.3rem;
     }
 
     .logo-small{
@@ -130,6 +155,57 @@ ul{
     .logo-large{
         display: block;
     }
+
+    .row{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        width: 35px;
+    }
+
+    .text{
+        padding-left: 5px;
+        display: block;
+    }
+
+    .left-center-bottom .row{
+        height: calc(100vh - 281px);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .playlist{
+        padding: 10px;
+    }
+
+    .list{
+        padding: 5px 0;
+    }
+
+    .playlist.top{
+        display: block;
+    }
+
+    .playlist .list i{
+        font-size: xx-large;
+    }
+
+    .playlist.bottom .list{
+        display: flex;
+        align-items: center;
+    }
+
+    .border{
+        border: 1px solid white;
+        margin: 10px 0;
+        width: 200px;
+    }
+
+
+
 }
 
 /* SIZE MD */
