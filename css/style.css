@@ -114,5 +114,7 @@ ul{
 
 
 @media screen and (min-width: 639px) {
-    
+    .left{
+        width: 200px;
+    }
 }
