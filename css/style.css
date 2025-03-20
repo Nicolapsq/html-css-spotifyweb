@@ -118,6 +118,9 @@ ul{
     border-radius: 50%;
 }
 
+
+/************ RIGHT-TOP ************/
+
 .right{
     width: calc(100% - 60px);
     display: flex;
@@ -130,12 +133,127 @@ ul{
     color: white;
 }
 
+.right-top .button{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.right-top button{
+    background-color: #080B12;
+    color: grey;
+    border-color: grey;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+.right-top button:hover{
+    color: white;
+    border-color: white;
+}
+
+/************************************/
+
+/************ RIGHT-BOTTOM ************/
+
+
 .right-bottom{
     height: calc(100vh - 100px);
     background-color: #141922;
-    color: white;
     overflow: auto;
 }
+
+.right-bottom .nav,
+.right-bottom .recently-played,
+.right-bottom .create-more-popular{
+    display: flex;
+}
+
+.right-bottom .nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.right-bottom .nav li{
+    width: calc((100% / 4) - 2rem);
+    text-align: center;
+    font-size: 0.7rem;
+    color: grey;
+}
+
+.right-bottom .nav li:hover{
+    color: white;
+    border-bottom: 1px solid #ADFF2F;
+}
+
+.right-bottom h1{
+    color: white;
+    padding: 2rem 0;
+    padding-left: 1rem;
+}
+
+.recently-played{
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.recently-played li{
+    width: calc((100% / 2) - 1rem);
+    text-align: center;
+}
+
+.recently-played li img{
+    display: block;
+}
+
+.title-song{
+    color: white;
+    padding: 1rem 0;
+
+}
+
+.subtitle{
+    color: grey;
+}
+
+.create{
+    padding: 1rem 0;
+    padding-left: 1rem;
+    color: grey;
+}
+
+.create h1{
+    padding: 0;
+}
+
+.create-more-popular{
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.create-more-popular li{
+    width: calc((100% / 2) - 1rem);
+    text-align: center;
+}
+
+.create-more-popular li img{
+    display: block;
+}
+
+.artist.create-more-popular img{
+    border-radius: 50%;
+}
+
+/************************************/
+
 
 .player{
     height: 100px;
@@ -166,6 +284,17 @@ ul{
 
 .player-left i{
     font-size: x-large;
+}
+
+.time-bar::before{
+    content: "0.25";
+    color: white;
+}
+
+.time-bar::after{
+    content: "4.35";
+    color: white;
+
 }
 
 .border-grey{
@@ -217,7 +346,6 @@ ul{
 .player-right i{
     color: #FFFFFF;
 }
-
 
 
 /* SIZE S */
@@ -290,6 +418,17 @@ ul{
         width: 200px;
     }
 
+/************ RIGHT-BOTTOM ************/
+
+
+    .right-bottom .nav li{
+        width: calc((100% / 3) - 2rem);
+        text-align: center;
+    }
+
+/************************************/
+
+
     .player-center .border-grey{
         width: 10rem;
     }
@@ -302,12 +441,58 @@ ul{
     .player-center .border-grey{
         width: 15rem;
     }
+
+/************ RIGHT-BOTTOM ************/
+
+
+    .right-bottom .nav li{
+        width: calc((100% / 5) - 2rem);
+    }
+
+    .right-bottom .nav{
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .recently-played li{
+        width: calc((100% / 4) - 1rem);
+    }
+
+    .create-more-popular{
+        width: 50%;
+    }
+
+/************************************/
+
 }
 
 /* SIZE LG */
 
 @media screen and (min-width: 1440px) {
     .player-center .border-grey{
-        width: 25rem;
+        width: 35rem;
     }
+
+/************ RIGHT-BOTTOM ************/
+
+.right-bottom .nav{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.right-bottom .nav li{
+    width: calc((100% / 6) - 2rem);
+}
+
+.recently-played li{
+    width: calc((100% / 6) - 1rem);
+}
+
+.create-more-popular{
+    width: calc(100% / 3);
+}
+
+/************************************/
+
+
 }
