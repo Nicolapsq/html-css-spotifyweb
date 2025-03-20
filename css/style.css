@@ -76,48 +76,114 @@ ul{
 
 /* SIZE XS */
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .content{
     height: calc(100vh - 100px);
     display: flex;
+}
+
+/******************LEFT*****************************/
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.left .text{
+    padding-left: 5px;
 }
 
 .left{
     padding: 10px;
     width: 60px;
     background-color: black;
+    color: grey;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+}
+
+.left ul{
+    font-size: 1rem;
+
+}
+
+.left .logo{
+    display: none;
+}
+
+.left .home{
+    padding: 1rem 0;
+}
+
+.left .home img{
+    width: 40px;
+    
+}
+
+.left .text{
+    display: none;
+}
+
+.left .text:hover{
     color: white;
 }
 
-.logo-small{
-    padding-bottom: 10px;
-}
-
-.logo-large{
-    display: none;
-    padding-bottom: 10px;
-
-}
-
-.text{
-    display: none;
-}
-
-.playlist.top{
-    display: none;
-}
-
-.bottom .logo{
-    width: 20px;
-    display: block;
-    margin: auto;
-}
-
-.bottom .logo.download{
+#add{
     width: 35px;
+    height: 35px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist #title{
+    font-size: 1.5rem;
+}
+
+.playlist i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.playlist{
+    overflow: auto;
+    display: none;
+}
+
+.playlist li{
+    padding: 0.5rem 0;
+}
+
+.install-app{
+    margin-top: auto;
+}
+
+.install-app li{
+    justify-content: center;
+}
+
+.install-app .logo-download{
+    width: 20px;
+}
+
+.install-app .logo-profile{
+    width: 30px;
     background-color: grey;
     border-radius: 50%;
 }
 
+hr{
+    background-color: white;
+    margin: 0.5rem 0;
+}
+
+/***************************************/
 
 /************ RIGHT-TOP ************/
 
@@ -159,6 +225,9 @@ ul{
 
 /************ RIGHT-BOTTOM ************/
 
+.radius{
+    border-radius: 50%;
+}
 
 .right-bottom{
     height: calc(100vh - 100px);
@@ -209,7 +278,31 @@ ul{
     text-align: center;
 }
 
+.create-more-popular li .position,
+.recently-played li .position{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-more-popular li img,
 .recently-played li img{
+    display: block;
+}
+
+.create-more-popular li i,
+.recently-played li i{
+    position: absolute;
+    color: white;
+    background-color: #0000008c;
+    font-size: xxx-large;
+    padding: 40%;
+    display: none;
+}
+
+.create-more-popular li:hover i,
+.recently-played li:hover i{
     display: block;
 }
 
@@ -352,71 +445,39 @@ ul{
 
 
 @media screen and (min-width: 639px) {
+    
+/******************LEFT************************/
+
     .left{
         width: 250px;
         font-size: 1.3rem;
     }
 
-    .logo-small{
+    .left .logo-small{
         display: none;
     }
 
-    .logo-large{
+    .left .logo{
         display: block;
     }
 
-    .row{
-        display: flex;
-        align-items: center;
+    .left .home img{
+        width: 30px;
     }
 
-    .logo{
-        width: 35px;
-    }
-
-    .text{
-        padding-left: 5px;
+    .left .text{
         display: block;
-    }
-
-    .left-center-bottom .row{
-        height: calc(100vh - 281px);
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
     }
 
     .playlist{
-        padding: 10px;
-    }
-
-    .list{
-        padding: 5px 0;
-    }
-
-    .playlist.top{
         display: block;
     }
 
-    .playlist .list i{
-        font-size: xx-large;
+    .install-app li{
+        justify-content: flex-start;
     }
 
-    .playlist.bottom .list{
-        display: flex;
-        align-items: center;
-    }
-
-    .bottom .logo{
-        display: block;
-        margin: 0;
-    }
-
-    .border{
-        border: 1px solid white;
-        margin: 10px 0;
-        width: 200px;
-    }
+/*************************************/
 
 /************ RIGHT-BOTTOM ************/
 
@@ -462,9 +523,9 @@ ul{
         width: 50%;
     }
 
+    }
+    
 /************************************/
-
-}
 
 /* SIZE LG */
 
@@ -492,7 +553,5 @@ ul{
     width: calc(100% / 3);
 }
 
-/************************************/
-
-
 }
+/************************************/
