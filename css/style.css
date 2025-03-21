@@ -129,6 +129,19 @@ body{
     display: none;
 }
 
+.active{
+    position: relative;
+}
+
+.active::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #ADFF2F;
+    display: none;
+}
+
+.player .text:hover,
 .left .text:hover{
     color: white;
 }
@@ -219,6 +232,7 @@ hr{
 .right-top button:hover{
     color: white;
     border-color: white;
+    font-size: 1rem;
 }
 
 /************************************/
@@ -258,7 +272,10 @@ hr{
 
 .right-bottom .nav li:hover{
     color: white;
-    border-bottom: 1px solid #ADFF2F;
+}
+
+.active-bottom.active-bottom:hover{
+    border-bottom: 2px solid green;
 }
 
 .right-bottom h1{
@@ -347,6 +364,20 @@ hr{
 
 /************************************/
 
+/**************PLAYER*******************/
+
+/**************PLAYER LEFT*****************/
+
+.inline-block{
+    display: inline-block;
+}
+.info.logo.central,
+.info.logo.right{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 150px;
+}
 
 .player{
     height: 100px;
@@ -379,6 +410,8 @@ hr{
     font-size: x-large;
 }
 
+/*******************************/
+
 .time-bar::before{
     content: "0.25";
     color: white;
@@ -394,12 +427,35 @@ hr{
     width: 5rem;
     background-color: #595959;
     border-radius: 10px;
+    height: 3px;
+
 }
 
 .border-light-grey{
     width: 20%;
     border: 1px solid #BFBFBF;
     border-radius: 10px;
+    background-color: #BFBFBF;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3px;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(50%);
+}
+
+
+.border-light-grey:hover{
+    border: 1px solid #ADFF2F;
+    background-color: #ADFF2F;
 }
 
 .player-center .border-grey{
@@ -440,6 +496,8 @@ hr{
     color: #FFFFFF;
 }
 
+/************************************/
+
 
 /* SIZE S */
 
@@ -463,6 +521,10 @@ hr{
 
     .left .home img{
         width: 30px;
+    }
+
+    .active::before{
+        display: block;
     }
 
     .left .text{
@@ -521,6 +583,14 @@ hr{
 
     .create-more-popular{
         width: 50%;
+    }
+
+    .info.logo.right{
+        display: inline-block;
+    }
+    
+    .info.logo.right>div{
+        display: inline-block;
     }
 
     }
